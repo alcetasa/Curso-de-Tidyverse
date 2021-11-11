@@ -1,6 +1,4 @@
-# Curso de Tidyverse
+# Completando el Curso de Tidyverse
  
- Códigos del Curso de tidyverse que se encuentra cargado en el canal de youtube:
- 
-https://www.youtube.com/channel/UCQkw3_gAqNATAnsIlLtdFoA
+ Códigos del Curso de tidyverse .
 
