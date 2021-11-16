@@ -1,6 +1,6 @@
-#### 03 La función filter
+#### 03 LA FUNCION FILTER
 
-## Carga de la librería tidyverse
+## Carga de la libreria tidyverse
 
 library(tidyverse)
 
@@ -34,21 +34,20 @@ b <- mtcars %>%
 
 a == b
 
-all_equal(a,b)
+all_equal(a,b)#comparacion exacta de 2 data frane
 
 ## El filtro anterior también podemos realizarlo con la función between
 
 mtcars %>% 
   filter(between(mpg, 15, 20)) ## Cuidado, between tiene rango incluyente >= & <=
 
-## Para aplicar el OR en vez de AND debemos usar el símbolo |
+## Para aplicar el OR en vez de AND debemos usar el simbolo |
 
 mtcars %>% 
   filter(mpg > 15 | cyl == 6)
 
 ## Tener cuidado con los NA cuando se aplican filtros
-*
-  ## Generemos algunos NA para demostrarlo
+## Generemos algunos NA para demostrarlo
 
 df2 <- mtcars
 df2$cyl[c(3,5,7,9)] <-  NA
@@ -78,3 +77,5 @@ mtcars %>%
 mtcars %>% 
   filter_all(all_vars(is_numeric(.)))
 
+#filter_at  ->anyvars()
+#filter_all ->all_vars()
