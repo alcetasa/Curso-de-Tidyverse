@@ -4,13 +4,12 @@
 ## Referencias: https://tidyr.tidyverse.org/articles/pivot.html
 
 ## Carga de librerías
-
+setwd("D:/CAPACITACIONES 2021/R/Clase de Tidyverse/Curso_tidyverse/data")
 library(tidyverse)
 
 ## Carga de datos
 
-animales <- read_csv('data/04_pivot_longer.csv')
-
+animales <- read_csv(file = '04_pivot_longer.csv')
 animales
 
 ## Uso del pivot_longer
@@ -20,7 +19,7 @@ animales %>%
                names_to = "Medida",
                values_to = "Valor")
 
-## Uso del gather (Versión obsoleta* del pivot_longer)
+## Uso del gather (Version obsoleta* del pivot_longer)
 
 animales %>% 
   gather(key = "Medida", value = "Valor", Peso:Talla)
@@ -31,7 +30,7 @@ animales %>%
          value = "Valor") %>% 
   as_tibble()
 
-## Uso del gather (Versión obsoleta* del pivot_longer)
+## Uso del gather (Version obsoleta* del pivot_longer)
 
 animales %>% 
   pivot_longer(cols = -Especie,
@@ -60,7 +59,7 @@ billboard %>%
     values_drop_na = TRUE,
   )
 
-## Múltiples variables en el nombre de la columna
+## Multiples variables en el nombre de la columna
 
 who
 
@@ -72,11 +71,11 @@ who %>% pivot_longer(
   values_drop_na = TRUE
 )
 
-## Múltiples observaciones por fila
+## Multiples observaciones por fila
 
 ### Ejemplo 1
 
-animales2 <- read_csv('data/04_pivot_longer2.csv')
+animales2 <- read_csv('04_pivot_longer2.csv')
 
 animales2 %>% 
   pivot_longer(!Fecha,
